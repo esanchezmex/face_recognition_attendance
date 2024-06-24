@@ -17,7 +17,7 @@ From your terminal, use the following commands:
 
 1. Clone the repository:
 
-> `git clone https://github.com/esanchezmez/your-repo-face_recognition_attendance.git`
+> `git clone https://github.com/esanchezmex/face_recognition_attendance.git`
 
 2. Navigate to the repo
    
