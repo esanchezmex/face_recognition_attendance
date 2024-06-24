@@ -3,8 +3,11 @@ import cv2
 import time
 import face_recognition
 
+def add_new_face() -> None:
+    pass
 
-def start_rec():
+
+def start_rec() -> None:
     video_capture = cv2.VideoCapture(0)
     last_save_time = time.time()
     save_interval = 2
@@ -23,7 +26,9 @@ def start_rec():
 
         current_time = time.time()
         if face_locations and (current_time - last_save_time) > save_interval:
-            face_filename = f"unknown_faces/face_{len(face_locations)}_{cv2.getTickCount()}.jpg"
+            face_filename = f"unknown_faces/face_{len(face_locations)}.jpg"
+            if os.path.exists(face_filename):
+                os.remove(face_filename)
             cv2.imwrite(face_filename, frame)
             print(f"Face detected. Image saved to {face_filename}")
             last_save_time = current_time
@@ -37,10 +42,10 @@ def start_rec():
     cv2.destroyAllWindows()
 
 
-def create_list():
+def create_list() -> None:
     pass
 
-def del_fotos():
+def del_fotos() -> None:
     pass
 
 
