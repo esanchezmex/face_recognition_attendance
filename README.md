@@ -13,14 +13,19 @@ The way this project works is the teacher runs the program, which will open a ca
 
 ### Steps
 
+From your terminal, use the following commands:
+
 1. Clone the repository:
-   `git clone https://github.com/esanchezmez/your-repo-face_recognition_attendance.git`
 
-2. Navigate to the repo
-     `cd face_recognition_attendance`
+> `git clone https://github.com/esanchezmez/your-repo-face_recognition_attendance.git`
 
-3. Install Dependencies
-     `pip3 install -r requirments.txt`
+3. Navigate to the repo
+   
+> `cd face_recognition_attendance`
+
+5. Install Dependencies
+   
+> `pip3 install -r requirments.txt`
 
 ## Usage
 
