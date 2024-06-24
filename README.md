@@ -29,7 +29,35 @@ From your terminal, use the following commands:
 
 ## Usage
 
+1. The first step is to collect the initial fotos of the students. Once these have been collected, add them to the directory called `known_faces`
+2. Once the fotos are in the correct directory, in the main.py script go to the end of the file where the main block is located. Uncomment the code to encode the initial faces
+3. Once you have the initial faces encoded, comment again the line to encode initial faces, and make sure only the `main()` function is uncommented.
+4. Run the script.
+
+### To add a new face
+
+In order to add a new face to the encodings list follow these steps:
+
+1. Collect the foto of the new student and add it to the known_faces directory
+2. Go to the bottom of the script to the main block.
+3. Un comment the `add_new_face()` function
+4. For arguments, input the file name of the foto as a string. Only the file name without a path, but make sure to inlcude the extension (i.e. "new_face.jpeg")
+5. Comment out the `main()` function
+6. Run the script
+7. Once you have the new face encoded, comment again the function to encode a new face, and make sure only the `main()` function is uncommented.
+
+The script is ready to recognize the new person. 
 
 
 ## Features
+
+### Continuous Camera
+
+The camera is continoulsy recording and identifyin faces, meaning that the teacher does not have to take any fotos neither of each student or the class as a whole. 
+
+### Delete screenshots immediatly after creating list
+
+Since the camera is taking screenshots to recognize and match the faces to the recorded encodings, students fotos will be temporarily saved in a directory called unknown_faces. For privacy conerncs, these images will be deleted as soon as the attendance list is created. 
+
+
 
