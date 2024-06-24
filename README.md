@@ -40,13 +40,27 @@ In order to add a new face to the encodings list follow these steps:
 
 1. Collect the foto of the new student and add it to the known_faces directory
 2. Go to the bottom of the script to the main block.
-3. Un comment the `add_new_face()` function
-4. For arguments, input the file name of the foto as a string. Only the file name without a path, but make sure to inlcude the extension (i.e. "new_face.jpeg")
-5. Comment out the `main()` function
-6. Run the script
-7. Once you have the new face encoded, comment again the function to encode a new face, and make sure only the `main()` function is uncommented.
+3. Un-comment the `add_new_face()` function
+4. For arguments, input the file name of the foto as a string. Only the file name without a path, but make sure to inlcude the extension
+   > i.e. "new_face.jpeg"
+6. Comment out the `main()` function
+7. Run the script
+8. Once you have the new face encoded, comment again the function to encode a new face, and make sure only the `main()` function is uncommented.
 
 The script is ready to recognize the new person. 
+
+
+### To delete a face
+
+In order to delete a face follow these steps:
+
+1. Go to the bottom of the script to the main block.
+2. Un-comment the `del_face()` function
+3. For arguments, input the name of the person whos face will be deleted as a stirng. Only the name without a path and without the file extension
+  > i.e. "old_face"
+4. Comment out the `main()` function
+5. Run the script
+6. Once you have the face deleted, comment again the function, and make sure only the `main()` function is uncommented.
 
 
 ## Features
