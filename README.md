@@ -33,9 +33,10 @@ From your terminal, use the following commands:
 > `mkdir known_faces`
 
 and add the fotos to the new directory.
-3. Once the fotos are in the correct directory, in the main.py script go to the end of the file where the main block is located. Uncomment the code to encode the initial faces
-4. Once you have the initial faces encoded, comment again the line to encode initial faces, and make sure only the `main()` function is uncommented.
-5. Run the script.
+
+2. Once the fotos are in the correct directory, in the main.py script go to the end of the file where the main block is located. Uncomment the code to encode the initial faces
+3. Once you have the initial faces encoded, comment again the line to encode initial faces, and make sure only the `main()` function is uncommented.
+4. Run the script.
 
 ### To add a new face
 
