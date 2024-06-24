@@ -4,7 +4,7 @@ import face_recognition
 known_faces = {}
 
 # Load the image of the person we want to recognize
-image_path = "known_faces/este_2.png"
+image_path = "known_faces/este_1.png"
 
 
 image = face_recognition.load_image_file(image_path)
