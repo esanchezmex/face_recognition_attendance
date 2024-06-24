@@ -19,11 +19,11 @@ From your terminal, use the following commands:
 
 > `git clone https://github.com/esanchezmez/your-repo-face_recognition_attendance.git`
 
-3. Navigate to the repo
+2. Navigate to the repo
    
 > `cd face_recognition_attendance`
 
-5. Install Dependencies
+3. Install Dependencies
    
 > `pip3 install -r requirments.txt`
 
