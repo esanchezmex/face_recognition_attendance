@@ -129,9 +129,15 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Uncomment the following line to encode the initial faces
     # encode_initial_faces()
+
+    # Uncomment the following line to add a new face
     # add_new_face("este.jpg")
+
+    # Uncomment the following line to delete a face
     # del_face("este_1")
+
     main()
 
     
