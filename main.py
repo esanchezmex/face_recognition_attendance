@@ -133,7 +133,7 @@ if __name__ == "__main__":
     # encode_initial_faces()
 
     # Uncomment the following line to add a new face
-    # add_new_face("este.jpg")
+    # add_new_face("javier.jpg")
 
     # Uncomment the following line to delete a face
     # del_face("este_1")
