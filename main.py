@@ -27,8 +27,6 @@ def start_rec() -> None:
         current_time = time.time()
         if face_locations and (current_time - last_save_time) > save_interval:
             face_filename = f"unknown_faces/face_{len(face_locations)}.jpg"
-            if os.path.exists(face_filename):
-                os.remove(face_filename)
             cv2.imwrite(face_filename, frame)
             print(f"Face detected. Image saved to {face_filename}")
             last_save_time = current_time
