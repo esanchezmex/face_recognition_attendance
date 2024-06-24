@@ -29,7 +29,7 @@ From your terminal, use the following commands:
 
 ## Usage
 
-1. The first step is to collect the initial fotos of the students. Once these have been collected, create a direcotry called `known_faces` using the following command prompt:
+1. The first step is to collect the initial fotos of the students. Once these have been collected, create a directory called `known_faces` using the following command prompt:
 > `mkdir known_faces`
 
 2. Add the fotos to the new directory.
