@@ -40,8 +40,7 @@ From your terminal, use the following commands:
 2. Add the fotos to the new directory.
 3. Once the fotos are in the correct directory, run the script, and enter 1. If the fotos of the students have not been placed in the `known_faces` directory an error will be raised. 
 4. Once you have the initial faces encoded, re-run the script and enter 0 to take attendance. 
-5. Run the script.
-6. When the camera shows up, have each person show their face to the camera. Once everyone has been processed, pres `q` to quit. 
+5. When the camera shows up, have each person show their face to the camera. Once everyone has been processed, pres `q` to quit. 
 
 As soon as the camera is stoped, a list of the people present and identified will display. 
 
