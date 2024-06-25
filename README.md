@@ -62,9 +62,8 @@ In order to delete a face follow these steps:
 
 > **Important note**: The name of the students is saved as the name of the file of their foto, so if the foto used to encode the student "Juan Costuras" is called "juan_costuras.jpeg", his name will be stored as "juan_costuras" in the encodings JSON. Take note of these names. 
 
-1. Go to the bottom of the script to the main block.
-2. Run the script and enter 3
-3. For arguments, input the *name of the person* whos face will be deleted *as a **stirng***. Only the name **without** a path and **without** the file extension. (view **Important Note** above)
+1. Run the script and enter 3
+2. For arguments, input the *name of the person* whos face will be deleted *as a **stirng***. Only the name **without** a path and **without** the file extension. (view **Important Note** above)
   > i.e. "juan_costuras"
 
 The record of this student (name and face encoding) has been deleted. The program will no longer recognize the student. 
