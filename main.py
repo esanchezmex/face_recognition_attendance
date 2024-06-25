@@ -4,11 +4,24 @@ import time
 import face_recognition
 import json
 
+def check_if_json_is_empty() -> bool:
+    try:
+        with open('known_faces.json') as file:
+            known_faces = json.load(file)
+        return not bool(known_faces)
+    except json.JSONDecodeError:
+        return True
+    except FileNotFoundError:
+        return True
+
 def encode_initial_faces() -> None:
-    if not os.path.exists('known_faces.json'):
+    if not os.path.exists('known_faces.json') or os.path.getsize('known_faces.json') == 0:
+        # File doesn't exist or is empty, create it with an empty dictionary
         with open('known_faces.json', 'w') as file:
-            file.write('{}')
-    with open('known_faces.json') as file:
+            json.dump({}, file)
+    
+    # Now we're sure the file exists and contains at least '{}'
+    with open('known_faces.json', 'r') as file:
         known_faces = json.load(file)
 
     known_faces_dir = os.path.join(os.path.dirname(__file__), 'known_faces')
@@ -104,12 +117,13 @@ def create_list() -> list[str]:
 
         with open('known_faces.json') as file:
             known_faces = json.load(file)
+        
         for name, face_encoding in known_faces.items():
             results = face_recognition.compare_faces([face_encoding], unknown_encoding)
             if results[0]:
                 attendance_list.append(name)
                 break
-    return(set(attendance_list))
+    return set(attendance_list)
 
 def del_fotos() -> None:
     if os.path.exists('unknown_faces'):
@@ -121,23 +135,33 @@ def del_fotos() -> None:
 def main() -> None:
     if not os.path.exists('unknown_faces'):
         os.makedirs('unknown_faces')
-    start_rec()
-    attendance_list = create_list()
-    print(f"Attendance: {attendance_list}")
-    del_fotos()
+
+    task = input("""Which task would you like to do?:
+                - Take attendance (type 0 or start)
+                - Encode initial faces (type 1 or enc)
+                - Add a new face (type 2 or add)
+                - Delete a face (type 3 or del) 
+                 """)
+    if task == "1" or task == "enc":
+        encode_initial_faces()
+    elif task == "2" or task == "add":
+        face_file_name = input("Enter the name of the file containing the face to be added (make sure to type only the file name and extension i.e. new_face.jpg): ")
+        add_new_face(face_file_name)
+    elif task == "3" or task == "del":
+        face_name = input("Enter the name of the face to be deleted (make sure to type only the name of the face without the extension i.e. new_face): ")
+        del_face(face_name)
+    else:
+        if check_if_json_is_empty():
+            print("There are no faces to compare with.\nPlease add faces to the known_faces.json file using either option 1 or 2")
+            return
+        start_rec()
+        attendance_list = create_list()
+        print(f"Attendance: {attendance_list}")
+        del_fotos()
 
 
 
 if __name__ == "__main__":
-    # Uncomment the following line to encode the initial faces
-    # encode_initial_faces()
-
-    # Uncomment the following line to add a new face
-    # add_new_face("javier.jpg")
-
-    # Uncomment the following line to delete a face
-    # del_face("este_1")
-
     main()
 
     

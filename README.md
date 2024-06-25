@@ -38,22 +38,21 @@ From your terminal, use the following commands:
 > `mkdir known_faces`
 
 2. Add the fotos to the new directory.
-3. Once the fotos are in the correct directory, in the main.py script go to the end of the file where the main block is located. Uncomment the the function called `encode_initial_faces` and comment out the `main()` function
-4. Once you have the initial faces encoded, comment again the line to encode initial faces, and make sure only the `main()` function is uncommented.
+3. Once the fotos are in the correct directory, run the script, and enter 1. If the fotos of the students have not been placed in the `known_faces` directory an error will be raised. 
+4. Once you have the initial faces encoded, re-run the script and enter 0 to take attendance. 
 5. Run the script.
+6. When the camera shows up, have each person show their face to the camera. Once everyone has been processed, pres `q` to quit. 
+
+As soon as the camera is stoped, a list of the people present and identified will display. 
 
 ### To add a new face
 
 In order to add a new face to the encodings list follow these steps:
 
 1. Collect the foto of the new student and add it to the `known_faces` directory
-2. Go to the bottom of the script to the main block.
-3. Un-comment the `add_new_face()` function
-4. For arguments, input the *file name* of the foto *as a **string***. Only the file name without the full path, but **make sure to inlcude the extension**
+2. Run the script and enter 2
+3. For arguments, input the *file name* of the foto *as a **string***. Only the file name without the full path, but **make sure to inlcude the extension**
    > i.e. "new_face.jpeg"
-6. Comment out the `main()` function
-7. Run the script
-8. Once you have the new face encoded, comment again the function to encode a new face, and make sure only the `main()` function is uncommented.
 
 The script is ready to recognize the new person. 
 
@@ -65,12 +64,9 @@ In order to delete a face follow these steps:
 > **Important note**: The name of the students is saved as the name of the file of their foto, so if the foto used to encode the student "Juan Costuras" is called "juan_costuras.jpeg", his name will be stored as "juan_costuras" in the encodings JSON. Take note of these names. 
 
 1. Go to the bottom of the script to the main block.
-2. Un-comment the `del_face()` function
+2. Run the script and enter 3
 3. For arguments, input the *name of the person* whos face will be deleted *as a **stirng***. Only the name **without** a path and **without** the file extension. (view **Important Note** above)
   > i.e. "juan_costuras"
-4. Comment out the `main()` function
-5. Run the script
-6. Once you have the face deleted, comment again the function, and make sure only the `main()` function is uncommented.
 
 The record of this student (name and face encoding) has been deleted. The program will no longer recognize the student. 
 
